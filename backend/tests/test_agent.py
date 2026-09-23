@@ -3,6 +3,23 @@ from types import SimpleNamespace
 from backend.ai import agent
 
 
+def test_load_env_file_reads_values_without_overriding_existing_environment(
+    monkeypatch, tmp_path
+):
+    env_file = tmp_path / ".env"
+    env_file.write_text(
+        "OPENAI_API_KEY=file-key\nOPENAI_MODEL=file-model\n# ignored\n",
+        encoding="utf-8",
+    )
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.setenv("OPENAI_MODEL", "existing-model")
+
+    agent._load_env_file(env_file)
+
+    assert agent.os.environ["OPENAI_API_KEY"] == "file-key"
+    assert agent.os.environ["OPENAI_MODEL"] == "existing-model"
+
+
 def test_agent_calls_engine_tool_before_writing(monkeypatch):
     calls = []
     first = SimpleNamespace(
