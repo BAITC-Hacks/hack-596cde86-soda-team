@@ -46,14 +46,13 @@ export function MeasureCard({ measure: m, avail, directionName, open, popUp, onT
   };
 
   return (
-    <div className={`mwrap${open ? ' is-open' : ''}${dismissed ? ' is-dismissed' : ''}`} style={dirVars(m.direction)} onKeyDown={onKeyDown} onMouseEnter={() => { setHovered(true); setDismissed(false); }} onMouseLeave={() => setHovered(false)} onFocus={() => setDismissed(false)}>
+    <div className={`mwrap${open ? ' is-open' : ''}${dismissed ? ' is-dismissed' : ''}`} style={dirVars(m.direction)} onKeyDown={onKeyDown}>
       <button
         type="button"
         className={`mcard${stateClass}`}
         disabled={blocked}
         aria-pressed={selected}
         aria-label={label}
-        aria-describedby={popId}
         onClick={onPick}
       >
         <span className="mcard-body">
@@ -80,6 +79,10 @@ export function MeasureCard({ measure: m, avail, directionName, open, popUp, onT
         aria-label={`Подробнее: ${m.id}`}
         aria-expanded={open}
         aria-controls={popId}
+        aria-describedby={popId}
+        onMouseEnter={() => { setHovered(true); setDismissed(false); }}
+        onMouseLeave={() => setHovered(false)}
+        onFocus={() => setDismissed(false)}
         onClick={() => { setDismissed(false); onToggleInfo(); }}
       >
         i

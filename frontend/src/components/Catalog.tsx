@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import type { Choice, CityData, DirectionCode } from '../types'
 import { DIR_ORDER, dirVars } from '../lib/directions'
 import { availability } from '../lib/rules'
+import { DistrictPicker } from './DistrictPicker'
 import { MeasureCard } from './MeasureCard'
 
 export type Filter = 'all' | DirectionCode
@@ -17,6 +19,8 @@ interface Props {
 }
 
 export function Catalog({ data, selection, filter, onFilter, openInfo, onOpenInfo, onAdd, onRemove }: Props) {
+  const [pendingDistrictMeasure, setPendingDistrictMeasure] = useState<string | null>(null)
+  const pendingMeasure = data.measures.find((measure) => measure.id === pendingDistrictMeasure)
   const list = data.measures.filter((m) => filter === 'all' || m.direction === filter)
   const tabs = [
     { key: 'all' as const, label: 'Все', count: data.measures.length },
@@ -28,7 +32,7 @@ export function Catalog({ data, selection, filter, onFilter, openInfo, onOpenInf
         {tab.key !== 'all' && <span className="dot" />}{tab.label}<span className="mono">{tab.count}</span>
       </button>)}
     </div>
-    <p className="catalog-hint">Выберите {data.rules.required_choices} мер. Для районных мер укажите район в наборе. <b>i</b> — детали.</p>
+    <p className="catalog-hint">Выберите {data.rules.required_choices} мер. Район для меры выбирается сразу; позже его можно изменить в наборе. <b>i</b> — детали.</p>
     <div className="catalog-grid">
       {list.map((measure, index) => {
         const avail = availability(measure, selection, data)
@@ -36,9 +40,19 @@ export function Catalog({ data, selection, filter, onFilter, openInfo, onOpenInf
           open={openInfo === measure.id} popUp={index >= 6} onToggleInfo={() => onOpenInfo(openInfo === measure.id ? null : measure.id)} onClose={() => onOpenInfo(null)}
           onPick={() => {
             if (avail.state === 'selected') onRemove(measure.id)
-            if (avail.state === 'available') onAdd({ measure_id: measure.id, district: null })
+            if (avail.state === 'available') {
+              if (measure.scope === 'district') {
+                onOpenInfo(null)
+                setPendingDistrictMeasure(measure.id)
+              } else {
+                onAdd({ measure_id: measure.id, district: null })
+              }
+            }
           }} />
       })}
     </div>
+    {pendingMeasure && <DistrictPicker measure={pendingMeasure} data={data} selection={selection}
+      onChoose={(district) => { onAdd({ measure_id: pendingMeasure.id, district }); setPendingDistrictMeasure(null) }}
+      onClose={() => setPendingDistrictMeasure(null)} />}
   </section>
 }

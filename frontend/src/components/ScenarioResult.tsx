@@ -1,4 +1,5 @@
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import Markdown from 'react-markdown'
 import type { CityData, Explanation, SimulationResult } from '../types'
 import { DistrictMap } from './DistrictMap'
 import * as fmt from '../lib/format'
@@ -35,7 +36,7 @@ export function ScenarioResult({ data, run, onRetry }: { data: CityData; run: Sc
     <DistrictMap data={data} result={result} />
     <section className="panel explanation-panel" aria-live="polite"><div className="panel-head"><h2>Разбор агента</h2><span className="aside muted">{explanation ? explanation.mode === 'ai' ? 'AI-анализ' : 'Анализ движка' : explanationError ? 'Ошибка анализа' : 'Подготавливаем анализ'}</span></div>
       {explanation ? <>
-        <p className="explanation-text">{explanation.text}</p>
+        <div className="explanation-text"><Markdown skipHtml disallowedElements={['img']}>{explanation.text}</Markdown></div>
         <div className="contributions"><h3>Вклад мер в Score</h3>{explanation.contributions.map((item) => <div key={item.measure_id}><span>{data.measures.find((m) => m.id === item.measure_id)?.name}</span><b className={item.score_delta < 0 ? 'negative' : 'positive'}>{fmt.signed(item.score_delta)}</b></div>)}</div>
       </> : explanationError ? <div className="notice is-err" role="alert">{explanationError}<button className="text-button" onClick={onRetry}>Повторить анализ</button></div> : <p className="muted">Сравниваем с оптимумом и ищем конкретные улучшения набора…</p>}
     </section>

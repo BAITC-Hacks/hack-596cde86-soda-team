@@ -1,10 +1,11 @@
 import type { CSSProperties } from 'react';
 import type { Choice, CityData, SimulationResult, ValidationResult } from '../types';
 import { dirVars } from '../lib/directions';
-import { findMeasure } from '../lib/rules';
+import { allowedDistricts, findMeasure } from '../lib/rules';
 import { budgetColor } from './Hud';
 import { IsoIcon } from './IsoIcon';
 import { CheckIcon, CloseIcon, PlusIcon } from './Icons';
+import { DistrictDropdown } from './DistrictDropdown';
 
 export type CalcState =
   | { status: 'idle' }
@@ -62,6 +63,7 @@ export function SetPanel(props: Props) {
               </li>
             );
           }
+          const allowed = m.scope === 'district' ? new Set(allowedDistricts(m, selection, data)) : null;
           return (
             <li key={m.id} className="slot is-filled" style={dirVars(m.direction)}>
               <span className="slot-n">{i + 1}</span>
@@ -75,18 +77,8 @@ export function SetPanel(props: Props) {
                 </span>
               </span>
               {m.scope === 'district' ? (
-                <select
-                  aria-label={`Район для ${m.id}`}
-                  value={c.district ?? ''}
-                  onChange={(e) => props.onDistrict(m.id, e.target.value)}
-                >
-                  <option value="">Выберите район</option>
-                  {data.districts.map((d) => (
-                    <option key={d.id} value={d.id}>
-                      {d.name}
-                    </option>
-                  ))}
-                </select>
+                <DistrictDropdown measureId={m.id} districtId={c.district} districts={data.districts}
+                  allowedIds={allowed!} onChange={(district) => props.onDistrict(m.id, district)} />
               ) : (
                 <span className="slot-city">Весь город</span>
               )}
