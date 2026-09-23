@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-23T10:09:39Z",
+  "title": "Design System: Аким на 5 часов",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Городской синий",
+        "tonalRamp": [
+          "oklch(15% 0.1050 242.67)",
+          "oklch(26% 0.1050 242.67)",
+          "oklch(38% 0.1050 242.67)",
+          "oklch(49% 0.1050 242.67)",
+          "oklch(61% 0.1050 242.67)",
+          "oklch(72% 0.1050 242.67)",
+          "oklch(84% 0.1050 242.67)",
+          "oklch(95% 0.1050 242.67)"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Сигнальное золото",
+        "tonalRamp": [
+          "oklch(15% 0.1332 78.90)",
+          "oklch(26% 0.1332 78.90)",
+          "oklch(38% 0.1332 78.90)",
+          "oklch(49% 0.1332 78.90)",
+          "oklch(61% 0.1332 78.90)",
+          "oklch(72% 0.1332 78.90)",
+          "oklch(84% 0.1332 78.90)",
+          "oklch(95% 0.1332 78.90)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Кремовый фон",
+        "tonalRamp": [
+          "oklch(15% 0.0095 93.57)",
+          "oklch(26% 0.0095 93.57)",
+          "oklch(38% 0.0095 93.57)",
+          "oklch(49% 0.0095 93.57)",
+          "oklch(61% 0.0095 93.57)",
+          "oklch(72% 0.0095 93.57)",
+          "oklch(84% 0.0095 93.57)",
+          "oklch(95% 0.0095 93.57)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Белая поверхность",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Тёплая бумага",
+        "tonalRamp": [
+          "oklch(15% 0.0054 95.10)",
+          "oklch(26% 0.0054 95.10)",
+          "oklch(38% 0.0054 95.10)",
+          "oklch(49% 0.0054 95.10)",
+          "oklch(61% 0.0054 95.10)",
+          "oklch(72% 0.0054 95.10)",
+          "oklch(84% 0.0054 95.10)",
+          "oklch(95% 0.0054 95.10)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Тёмные чернила",
+        "tonalRamp": [
+          "oklch(15% 0.0241 248.87)",
+          "oklch(26% 0.0241 248.87)",
+          "oklch(38% 0.0241 248.87)",
+          "oklch(49% 0.0241 248.87)",
+          "oklch(61% 0.0241 248.87)",
+          "oklch(72% 0.0241 248.87)",
+          "oklch(84% 0.0241 248.87)",
+          "oklch(95% 0.0241 248.87)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Приглушённый текст",
+        "tonalRamp": [
+          "oklch(15% 0.0222 255.62)",
+          "oklch(26% 0.0222 255.62)",
+          "oklch(38% 0.0222 255.62)",
+          "oklch(49% 0.0222 255.62)",
+          "oklch(61% 0.0222 255.62)",
+          "oklch(72% 0.0222 255.62)",
+          "oklch(84% 0.0222 255.62)",
+          "oklch(95% 0.0222 255.62)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Граница",
+        "tonalRamp": [
+          "oklch(15% 0.0171 88.01)",
+          "oklch(26% 0.0171 88.01)",
+          "oklch(38% 0.0171 88.01)",
+          "oklch(49% 0.0171 88.01)",
+          "oklch(61% 0.0171 88.01)",
+          "oklch(72% 0.0171 88.01)",
+          "oklch(84% 0.0171 88.01)",
+          "oklch(95% 0.0171 88.01)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Усиленная граница",
+        "tonalRamp": [
+          "oklch(15% 0.0203 87.53)",
+          "oklch(26% 0.0203 87.53)",
+          "oklch(38% 0.0203 87.53)",
+          "oklch(49% 0.0203 87.53)",
+          "oklch(61% 0.0203 87.53)",
+          "oklch(72% 0.0203 87.53)",
+          "oklch(84% 0.0203 87.53)",
+          "oklch(95% 0.0203 87.53)"
+        ]
+      },
+      "hud": {
+        "role": "neutral",
+        "displayName": "Тёмный пульт",
+        "tonalRamp": [
+          "oklch(15% 0.0241 248.87)",
+          "oklch(26% 0.0241 248.87)",
+          "oklch(38% 0.0241 248.87)",
+          "oklch(49% 0.0241 248.87)",
+          "oklch(61% 0.0241 248.87)",
+          "oklch(72% 0.0241 248.87)",
+          "oklch(84% 0.0241 248.87)",
+          "oklch(95% 0.0241 248.87)"
+        ]
+      },
+      "hud-2": {
+        "role": "neutral",
+        "displayName": "Второй слой пульта",
+        "tonalRamp": [
+          "oklch(15% 0.0257 248.79)",
+          "oklch(26% 0.0257 248.79)",
+          "oklch(38% 0.0257 248.79)",
+          "oklch(49% 0.0257 248.79)",
+          "oklch(61% 0.0257 248.79)",
+          "oklch(72% 0.0257 248.79)",
+          "oklch(84% 0.0257 248.79)",
+          "oklch(95% 0.0257 248.79)"
+        ]
+      },
+      "hud-line": {
+        "role": "neutral",
+        "displayName": "Разделитель пульта",
+        "tonalRamp": [
+          "oklch(15% 0.0260 250.85)",
+          "oklch(26% 0.0260 250.85)",
+          "oklch(38% 0.0260 250.85)",
+          "oklch(49% 0.0260 250.85)",
+          "oklch(61% 0.0260 250.85)",
+          "oklch(72% 0.0260 250.85)",
+          "oklch(84% 0.0260 250.85)",
+          "oklch(95% 0.0260 250.85)"
+        ]
+      },
+      "hud-muted": {
+        "role": "neutral",
+        "displayName": "Подписи пульта",
+        "tonalRamp": [
+          "oklch(15% 0.0172 250.87)",
+          "oklch(26% 0.0172 250.87)",
+          "oklch(38% 0.0172 250.87)",
+          "oklch(49% 0.0172 250.87)",
+          "oklch(61% 0.0172 250.87)",
+          "oklch(72% 0.0172 250.87)",
+          "oklch(84% 0.0172 250.87)",
+          "oklch(95% 0.0172 250.87)"
+        ]
+      },
+      "ok": {
+        "role": "secondary",
+        "displayName": "Зелёный статуса",
+        "tonalRamp": [
+          "oklch(15% 0.1284 154.95)",
+          "oklch(26% 0.1284 154.95)",
+          "oklch(38% 0.1284 154.95)",
+          "oklch(49% 0.1284 154.95)",
+          "oklch(61% 0.1284 154.95)",
+          "oklch(72% 0.1284 154.95)",
+          "oklch(84% 0.1284 154.95)",
+          "oklch(95% 0.1284 154.95)"
+        ]
+      },
+      "ok-soft": {
+        "role": "secondary",
+        "displayName": "Светлый зелёный",
+        "tonalRamp": [
+          "oklch(15% 0.1118 154.20)",
+          "oklch(26% 0.1118 154.20)",
+          "oklch(38% 0.1118 154.20)",
+          "oklch(49% 0.1118 154.20)",
+          "oklch(61% 0.1118 154.20)",
+          "oklch(72% 0.1118 154.20)",
+          "oklch(84% 0.1118 154.20)",
+          "oklch(95% 0.1118 154.20)"
+        ]
+      },
+      "bad": {
+        "role": "secondary",
+        "displayName": "Кирпичный риска",
+        "tonalRamp": [
+          "oklch(15% 0.1680 33.52)",
+          "oklch(26% 0.1680 33.52)",
+          "oklch(38% 0.1680 33.52)",
+          "oklch(49% 0.1680 33.52)",
+          "oklch(61% 0.1680 33.52)",
+          "oklch(72% 0.1680 33.52)",
+          "oklch(84% 0.1680 33.52)",
+          "oklch(95% 0.1680 33.52)"
+        ]
+      },
+      "bad-soft": {
+        "role": "secondary",
+        "displayName": "Светлый кирпичный",
+        "tonalRamp": [
+          "oklch(15% 0.1305 35.21)",
+          "oklch(26% 0.1305 35.21)",
+          "oklch(38% 0.1305 35.21)",
+          "oklch(49% 0.1305 35.21)",
+          "oklch(61% 0.1305 35.21)",
+          "oklch(72% 0.1305 35.21)",
+          "oklch(84% 0.1305 35.21)",
+          "oklch(95% 0.1305 35.21)"
+        ]
+      },
+      "bad-ink": {
+        "role": "secondary",
+        "displayName": "Текст риска",
+        "tonalRamp": [
+          "oklch(15% 0.1376 31.41)",
+          "oklch(26% 0.1376 31.41)",
+          "oklch(38% 0.1376 31.41)",
+          "oklch(49% 0.1376 31.41)",
+          "oklch(61% 0.1376 31.41)",
+          "oklch(72% 0.1376 31.41)",
+          "oklch(84% 0.1376 31.41)",
+          "oklch(95% 0.1376 31.41)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Итог HUD",
+        "purpose": "Крупный Score."
+      },
+      "headline": {
+        "displayName": "Заголовок сценария",
+        "purpose": "Начало завершённого расчёта."
+      },
+      "title": {
+        "displayName": "Заголовок панели",
+        "purpose": "Название блока управления или результата."
+      },
+      "body": {
+        "displayName": "Разбор",
+        "purpose": "Длинный текст объяснения."
+      },
+      "label": {
+        "displayName": "Подпись HUD",
+        "purpose": "Компактные прописные метки."
+      },
+      "numeric": {
+        "displayName": "Числовая метка",
+        "purpose": "Цены, счётчики и изменения."
+      }
+    },
+    "shadows": [
+      {
+        "name": "measure-hover",
+        "value": "0 8px 20px rgba(22, 32, 42, 0.14)",
+        "purpose": "Подъём доступной карточки."
+      },
+      {
+        "name": "popover",
+        "value": "0 12px 32px rgba(22, 32, 42, 0.35)",
+        "purpose": "Всплывающая справка меры."
+      },
+      {
+        "name": "critical-cell",
+        "value": "inset 0 0 0 2px #c7412b",
+        "purpose": "Постоянный контур критического значения."
+      }
+    ],
+    "motion": [
+      {
+        "name": "measure-transition",
+        "value": "0.12s ease",
+        "purpose": "Transform и тень карточки."
+      },
+      {
+        "name": "budget-transition",
+        "value": "0.35s ease",
+        "purpose": "Ширина и цвет бюджета."
+      },
+      {
+        "name": "slot-entry",
+        "value": "0.5s cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "Добавление меры в набор."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Длительность анимаций и переходов при prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1200px"
+      },
+      {
+        "name": "stacked",
+        "value": "850px"
+      },
+      {
+        "name": "phone",
+        "value": "580px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Кнопка расчёта",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Основное действие; отдельный hover-цвет в исходнике отсутствует.",
+      "html": "<button class=\"ds-calc\">Рассчитать Score</button>",
+      "css": ".ds-calc { font-family: var(--font-body, 'Golos Text', sans-serif); min-height:44px; padding:10px 14px; border:0; border-radius:10px; background:var(--accent,#0b5c8c); color:#fff; font-size:14px; font-weight:700; cursor:pointer; } .ds-calc:hover { background:var(--accent,#0b5c8c); } .ds-calc:disabled { background:#e2ddd2; color:#6b7380; cursor:not-allowed; } .ds-calc:focus-visible { outline: 3px solid var(--gold, #d9a13a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Текстовое действие",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Загрузка примера и повторная попытка.",
+      "html": "<button class=\"ds-text\">Загрузить пример</button>",
+      "css": ".ds-text { font-family: var(--font-body, 'Golos Text', sans-serif); padding:7px 0; border:0; background:none; color:var(--accent,#0b5c8c); font-size:12px; font-weight:600; text-decoration:underline; text-underline-offset:3px; cursor:pointer; } .ds-text:hover { color:var(--accent,#0b5c8c); } .ds-text:focus-visible { outline: 3px solid var(--gold, #d9a13a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Удаление меры",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Компактное действие с доступной подписью.",
+      "html": "<button class=\"ds-icon\" aria-label=\"Убрать меру из набора\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg></button>",
+      "css": ".ds-icon { width:28px; height:28px; padding:0; border:1px solid var(--line,#ddd8cc); border-radius:7px; background:var(--surface,#fff); color:var(--muted,#5b6470); display:flex; align-items:center; justify-content:center; cursor:pointer; } .ds-icon:hover { background:var(--surface,#fff); } .ds-icon:focus-visible { outline: 3px solid var(--gold, #d9a13a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Выбор района",
+      "kind": "input",
+      "refersTo": "district-select",
+      "description": "Нативный select внутри выбранной районной меры.",
+      "html": "<select class=\"ds-select\" aria-label=\"Район\"><option>Выберите район</option></select>",
+      "css": ".ds-select { font-family: var(--font-body, 'Golos Text', sans-serif); height:30px; width:126px; border-radius:7px; border:1px solid var(--line-strong,#cfc9bb); background:var(--surface,#fff); color:var(--ink,#16202a); padding:0 6px; font-size:12px; font-weight:500; } .ds-select:hover { border-color:var(--line-strong,#cfc9bb); } .ds-select:focus-visible { outline: 3px solid var(--gold, #d9a13a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Навигация",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Ссылки к разделам в бумажной полосе.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#simulator\" aria-current=\"page\">Симулятор</a><a href=\"#districts\">Районы</a><a href=\"#method\">Методика</a></nav>",
+      "css": ".ds-nav { font-family: var(--font-body, 'Golos Text', sans-serif); display:flex; flex-wrap:wrap; gap:20px; background:var(--paper,#faf9f5); padding:0 16px; border-bottom:1px solid var(--line,#ddd8cc); font-size:13px; font-weight:500; } .ds-nav a { color:var(--muted,#5b6470); text-decoration:none; padding:13px 0; } .ds-nav a[aria-current=\"page\"] { color:var(--ink,#16202a); border-bottom:2px solid var(--accent,#0b5c8c); padding-bottom:11px; } .ds-nav a:hover { text-decoration:none; } .ds-nav a:focus-visible { outline:3px solid var(--gold,#d9a13a); outline-offset:2px; }"
+    },
+    {
+      "name": "Фильтр каталога",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Категориальный фильтр с состоянием aria-pressed.",
+      "html": "<button class=\"ds-tab\" aria-pressed=\"false\">Все меры</button> <button class=\"ds-tab\" aria-pressed=\"true\">Транспорт</button>",
+      "css": ".ds-tab { font-family: var(--font-body, 'Golos Text', sans-serif); height:32px; padding:0 12px; border-radius:8px; border:1px solid var(--line-strong,#cfc9bb); background:var(--surface,#fff); color:var(--ink,#16202a); font-size:13px; font-weight:500; cursor:pointer; } .ds-tab[aria-pressed=\"true\"] { background:var(--ink,#16202a); border-color:var(--ink,#16202a); color:#fff; } .ds-tab:hover { cursor:pointer; } .ds-tab:focus-visible { outline: 3px solid var(--gold, #d9a13a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Панель",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Белая поверхность без постоянной тени.",
+      "html": "<section class=\"ds-panel\"><h2>Набор</h2><p>Выберите меры в каталоге.</p></section>",
+      "css": ".ds-panel { font-family: var(--font-body, 'Golos Text', sans-serif); padding:12px; border-radius:14px; background:var(--surface,#fff); color:var(--ink,#16202a); border:1px solid var(--line,#ddd8cc); display:flex; flex-direction:column; gap:8px; } .ds-panel h2 { margin:0; font-family:var(--font-display,'Unbounded',sans-serif); font-size:14px; font-weight:600; } .ds-panel p { margin:0; color:var(--muted,#5b6470); font-size:12px; }"
+    },
+    {
+      "name": "Панель показателей",
+      "kind": "custom",
+      "refersTo": "hud",
+      "description": "Тёмная сводка; прочерки в примере обозначают отсутствие данных.",
+      "html": "<section class=\"ds-hud\"><div class=\"ds-seg\"><span class=\"ds-label\">Бюджет</span><span class=\"ds-number\">— / —</span></div><div class=\"ds-seg\"><span class=\"ds-label\">Score</span><strong class=\"ds-score\">—</strong></div></section>",
+      "css": ".ds-hud { font-family: var(--font-body, 'Golos Text', sans-serif); display:flex; flex-wrap:wrap; padding:0 8px; background:var(--hud,#16202a); color:var(--paper,#faf9f5); } .ds-seg { min-height:64px; padding:0 16px; display:flex; flex-direction:column; justify-content:center; gap:6px; } .ds-seg + .ds-seg { border-left:1px solid var(--hud-line,#2b3642); } .ds-label { font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--hud-muted,#b9c2cc); } .ds-number { font-family:var(--font-mono,'JetBrains Mono',monospace); font-size:17px; font-weight:700; } .ds-score { font-family:var(--font-display,'Unbounded',sans-serif); font-size:32px; font-weight:600; letter-spacing:-.02em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Городской пульт и журнал сценариев",
+    "overview": "Пользователь собирает городской план в компактном каталоге, сверяет ограничения в тёмной панели показателей и читает результаты ниже. Кремовый фон, бумажные поверхности, синий акцент и изометрические городские пиктограммы повторяют предоставленный визуальный образец.\n\nДля текущего экрана принят режим Operate: выбор мер и чтение результата определяют плотность, порядок блоков и состояния элементов. Это описание существующей реализации, а не новый бренд или продуктовая стратегия.",
+    "keyCharacteristics": [
+      "Кремовая страница, белые панели и тёмный HUD.",
+      "Unbounded для заголовков, Golos Text для текста, JetBrains Mono для чисел.",
+      "Цвет направления, изометрическая пиктограмма и текстовая подпись в каталоге.",
+      "Завершённые сценарии последовательно добавляются ниже управления."
+    ],
+    "rules": [
+      {
+        "name": "The Source Rule",
+        "body": "Сохраняйте значения палитры из frontmatter; цвет направления берите из существующей тройки color / tint / hud в src/lib/directions.ts.",
+        "section": "colors"
+      },
+      {
+        "name": "The Numeric Role Rule",
+        "body": "Для счётчиков, цен и изменений используйте моноширинный шрифт; крупный итоговый Score сохраняет Unbounded.",
+        "section": "typography"
+      },
+      {
+        "name": "The Continuous Journal Rule",
+        "body": "После завершения расчёта добавляйте самостоятельный блок сценария ниже управления, сохраняя предыдущие блоки до перезагрузки страницы.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do сохранять палитру, шрифты и исходные изометрические SVG из предоставленного образца.",
+      "Do показывать выбранное, заблокированное и ошибочное состояние вместе с текстом или знаком.",
+      "Do добавлять завершённый сценарий вниз страницы вместе с набором, графиком, таблицей и разбором.",
+      "Do брать показатели, ограничения и названия из API; форматировать результат движка при выводе.",
+      "Do сохранять видимый фокус и учитывать prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't ограничивать приложение высотой окна или скрывать журнал в выдвижной панели.",
+      "Don't заменять пиктограммы эмодзи или случайным набором иконок.",
+      "Don't обозначать критическое значение одним цветом без значения и пояснения.",
+      "Don't выдавать неподтверждённый вклад меры или будущий Score за результат расчёта.",
+      "Don't переносить демонстрационные данные из frontend_new в рабочие компоненты."
+    ]
+  }
+}

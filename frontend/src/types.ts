@@ -62,6 +62,14 @@ export interface CityData {
   districts: District[]
   measures: Measure[]
   baseline: SimulationResult
+  synergies: Array<{ first: string; second: string; indicator: IndicatorCode; bonus: number }>
+  incompatibilities: Array<{ first: string; second: string; scope: 'city' | 'same_district' }>
+}
+
+export interface RankedSelection {
+  selection: Choice[]
+  cost: number
+  score: number
 }
 
 export interface ValidationResult {
