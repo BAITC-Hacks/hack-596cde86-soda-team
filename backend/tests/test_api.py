@@ -64,3 +64,24 @@ def test_best_endpoint_returns_reference_scenario():
     response = client.get("/api/best")
     assert response.status_code == 200
     assert round(response.json()[0]["score"], 3) == 57.237
+
+
+def test_compare_endpoint_returns_score_difference():
+    optimum = [
+        {"measure_id": "M2", "district": None},
+        {"measure_id": "M3", "district": "nura"},
+        {"measure_id": "M8", "district": "nura"},
+        {"measure_id": "M9", "district": "nura"},
+        {"measure_id": "M14", "district": None},
+    ]
+    response = client.post(
+        "/api/compare",
+        json={"left": EXAMPLE_JSON["selection"], "right": optimum},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert round(body["left_score"], 3) == 56.543
+    assert round(body["right_score"], 3) == 57.237
+    assert round(body["score_delta"], 3) == 0.694
+    assert body["better"] == "right"

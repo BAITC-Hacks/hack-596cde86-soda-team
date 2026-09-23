@@ -7,13 +7,26 @@ from pydantic import BaseModel
 
 from backend.ai.agent import explain
 from backend.ai.tools import scenario_facts
-from backend.engine import Choice, baseline, find_best, load_data, simulate, validate
+from backend.engine import (
+    Choice,
+    baseline,
+    compare,
+    find_best,
+    load_data,
+    simulate,
+    validate,
+)
 
 app = FastAPI(title="Аким на 5 часов", version="1.0.0")
 
 
 class ScenarioRequest(BaseModel):
     selection: list[Choice]
+
+
+class CompareRequest(BaseModel):
+    left: list[Choice]
+    right: list[Choice]
 
 
 @app.exception_handler(RequestValidationError)
@@ -79,6 +92,20 @@ def explain_scenario(request: ScenarioRequest):
         "best_score": facts["best"]["score"],
         "gap_to_best": facts["gap_to_best"],
         "suggestions": facts["suggestions"],
+    }
+
+
+@app.post("/api/compare")
+def compare_scenarios(request: CompareRequest):
+    _require_valid(request.left)
+    _require_valid(request.right)
+    result = compare(request.left, request.right)
+    return {
+        "left_score": result.score_a,
+        "right_score": result.score_b,
+        "score_delta": result.score_b - result.score_a,
+        "better": "left" if result.score_a > result.score_b else "right" if result.score_b > result.score_a else "equal",
+        "district_score_deltas": result.district_score_deltas,
     }
 
 
